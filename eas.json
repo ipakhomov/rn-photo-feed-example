@@ -1,0 +1,11 @@
+{
+  "build": {
+    "development": {
+      "channel": "development",
+      "distribution": "internal",
+      "env": {
+        "APP_ENV": "development"
+      }
+    }
+  }
+}
