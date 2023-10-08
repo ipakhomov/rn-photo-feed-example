@@ -3,6 +3,10 @@ import { fetchBaseQuery } from '@reduxjs/toolkit/query';
 import { plainToInstance } from 'class-transformer';
 import { PexelsPhoto, PexelsSearchResponse } from './models';
 
+if (!process.env.EXPO_PUBLIC_PEXELS_API_KEY) {
+  throw new Error('Missing EXPO_PUBLIC_PEXELS_API_KEY environment variable');
+}
+
 export const pexelsApi = createApi({
   reducerPath: 'pexelsApi',
   baseQuery: fetchBaseQuery({
